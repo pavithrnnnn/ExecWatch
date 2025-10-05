@@ -1,7 +1,7 @@
 # 🛡️ ExecWatch Kernel Module
 
 A small Linux kernel module that hooks the kernel exec path (via a kprobe) to record process execution events and exposes the recent events via `/proc/execwatch`.
-My First project on Linux Drivers 😅
+-My First project on Linux Drivers 😅
 
 
 ## ✨ Why this is useful 
@@ -42,7 +42,7 @@ cat /proc/execwatch
 
 ## ⚠️ Caution: Dos and Don'ts
 
-##  ✅ Dos:
+##  ✅ Do's:
 
 - Test inside a virtual machine (VirtualBox, QEMU, Multipass) first.
 
