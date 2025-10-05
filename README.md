@@ -38,10 +38,11 @@ cat /proc/execwatch
 * `cat /proc/execwatch` shows the most recent execution events (pid, comm, argv0/file, timestamp).
 * `dmesg` will also log each event during module load.
 
+---------------------------------------------------------------------------------------------
 
 ## ⚠️ Caution: Dos and Don'ts
 
-# ✅ Dos:
+##  ✅ Dos:
 
 - Test inside a virtual machine (VirtualBox, QEMU, Multipass) first.
 
@@ -51,7 +52,7 @@ cat /proc/execwatch
 
 - Use root privileges only when necessary for insmod and reading /proc/execwatch.
 
-# ❌ Don'ts:
+## ❌ Don'ts:
 
 - Don't run on a production system without proper testing.
 
