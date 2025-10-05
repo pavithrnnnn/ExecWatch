@@ -1,16 +1,21 @@
 # 🛡️ ExecWatch Kernel Module
 
 A small Linux kernel module that hooks the kernel exec path (via a kprobe) to record process execution events and exposes the recent events via `/proc/execwatch`.
+My First project on Linux Drivers 😅
+
+
 ## ✨ Why this is useful 
 
 - 🖥️ Demonstrates kernel instrumentation (kprobes) and procfs exposure.
 - 🔍 Useful for building auditing tools or understanding userland executions.
 - 🚨 Can be extended to detect suspicious executions (setuid binaries, executions from writable directories, unexpected interpreters, etc..).
 
+
 ## 📂 Files
 
 - `driver_no_comments.c` —  source code
 - `Makefile` — build the module
+
 
 ## 🛠️ Building
 
@@ -19,3 +24,16 @@ A small Linux kernel module that hooks the kernel exec path (via a kprobe) to re
 make
 # produces execwatch.ko
 ````
+
+## 🚀 Installing
+
+```bash
+sudo insmod execwatch.ko
+# check dmesg for confirmation
+cat /proc/execwatch
+```
+
+## 👀 Usage
+
+* `cat /proc/execwatch` shows the most recent execution events (pid, comm, argv0/file, timestamp).
+* `dmesg` will also log each event during module load.
